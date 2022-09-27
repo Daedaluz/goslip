@@ -33,3 +33,10 @@ func NewReadWriter(rw io.ReadWriter) ReadWriter {
 		writer: &writer{o: rw},
 	}
 }
+
+func NewReadWriter2(r io.Reader, w io.Writer) ReadWriter {
+	return &readWriter{
+		reader: &reader{r: r},
+		writer: &writer{o: w},
+	}
+}
